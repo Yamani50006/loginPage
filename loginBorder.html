@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            background-color: #0e1538;
+
+        }
+        .border{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 400px;
+            background-color: rgba(0, 0, 0,.5);
+            border-radius: 15px;
+            overflow: hidden;
+            flex-direction: column;
+           
+        
+        }
+        .text  h2{
+            color: rgb(226, 226, 266);
+            font-size: 5rem;
+            text-shadow: 2px 2px black;
+            z-index: 2;
+        }
+
+        .border::before{
+            position: absolute;
+            content:"";
+            width: 170px;
+            height: 140%;
+            background:linear-gradient(135deg,#00ccff,#d500f9);
+            animation: roate 4s linear infinite;
+           
+
+        }
+ 
+        .border::after{
+            content: "";
+            width: 290px;
+            height: 97%;
+            position: absolute;
+            background: rgba(0, 0, 0,5);
+            border-radius: 15px;
+        }
+        @keyframes roate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        form{
+            z-index: 2;
+        }
+        form{
+            margin-top: 20px;
+            width: 100%;    
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;  
+        }
+        
+        .text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+        }
+        input{
+            width: 80%;
+            padding: 8px ;
+            margin: 10px auto;
+            border-bottom: 2px solid black;
+            border: 0;
+            outline: none;
+            border-radius: 20px;
+        }
+        button{
+            width: 50%;
+            height: 30px;
+            border: 0;
+            outline: 0;
+            border-radius: 20px;
+            background: rgba(0, 0, 0,.5);
+            color: aliceblue;
+            margin: 6px auto;
+        }
+        button:hover{
+            border:1px solid white;
+            transition: all .2 s ease-in-out;
+        }
+         p{
+            z-index: 2;
+            color: #fff;
+            margin-top:20px ;
+         }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="border">
+     
+             <div class="text">
+                 <h2>Login</h2>
+             </div>
+            
+            <form action="">
+             <input type="text" name="" id="name" placeholder="User Name">
+             <input type="text" name="" id="pass" placeholder="Password"> 
+             <button type="submit">login</button>
+      </form>
+      <p>ALready have account</p>
+        
+    </div>
+</body>
+</html>
